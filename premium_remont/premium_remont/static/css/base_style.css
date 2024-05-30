@@ -1,0 +1,36 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+nav {
+    background: #21201E;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right:0;
+    height: auto;
+    z-index:10;
+}
+
+nav a {
+    color: white;
+    padding: inherit;
+}
+
+nav img {
+    padding-left: 20px;
+}
+
+.afternav {
+    margin-top: 90px;
+}
+
+.Navigatpanel {
+    padding: 35px 20px;
+    display: inline;
+    position: absolute;
+    right: 0;
+}
+
+.Navigatpanel a {color:#CECECE;}

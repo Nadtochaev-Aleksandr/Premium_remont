@@ -1,0 +1,25 @@
+.p2 {
+    margin-bottom:50px;
+}
+
+.p2 li {
+    padding-left: 1em;
+}
+
+.p2 li::marker{
+    content: "-";
+    font-size: 250%;
+    color: #CBA782;
+}
+
+.p2 li:last-child{
+    padding-bottom:30px;
+}
+
+.p2 h1 {
+    padding: 70px 40px 40px 40px;
+}
+
+.p2 ul {
+    padding: 10px 50px;
+}

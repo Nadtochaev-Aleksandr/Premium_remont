@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'catalog/css/first_page_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="p1">
+    <img src="{% static 'catalog/img/sovremennyj-interier.jpg' %}" alt="Тут должна быть фотка ремонта" >
+    <div class="p1_text">
+        {% for i in page1 %}
+            <p class="title"> {{i.title|upper}} </p>
+            <h1> {{i.text|upper}} </h1>
+            <ul>
+                <li>{{i.preimushestva}} </li>
+                <li> С соблюдением всех сроков </li>
+                <li> C 110% юридической ответственностью по договору</li>
+            </ul>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

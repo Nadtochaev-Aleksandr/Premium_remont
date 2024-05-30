@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'catalog/css/4th_page_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="p4">
+    <a name="Этапы ремонта"><h1>{{p4title}}</h1></a>
+    <ol class="p4_list">
+        {% for i in page4 %}
+        <li><span class="list_title" style="font-weight:bold"> {{i.list_title}}</span><br><span class="list_content">{{i.list_text}}</span></li>
+        {% endfor %}
+    </ol>
+
+</div>
+</body>
+</html>

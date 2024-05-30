@@ -1,0 +1,17 @@
+.p5 {
+    height:1000px;
+    width:100%;
+    color: white;
+    /*background-image:url('https://toremont.ru/bundles/app/images/A9G.jpg');- ссыдлка на изображение по внешнему url адресу из интернет сети*/
+    /*background-image:url('page5.jpg');ссыдлка на изображение по пути внутри папки css (папки в которой находится файл 5th_page_style.css*/
+    background-image:url('../img/page5.jpg'); /*ссыдлка на изображение по пути static/img/page5.jpg - ".." означают выход из папки css в которой находится файл 5th_page_style.css, попадаем в папку static. Далее прописываем путь к файлу - папка img/ файл 5page.jpg*/
+    opacity: 0,5;
+    background-repeat: no-repeat;
+    background-size: 100% 1000px;
+    background-color:#21201E;
+}
+
+.p5 h1 {
+    font-size: 40px;
+    padding:250px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'catalog/css/second_page_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="p2">
+    <a name="Проблемы"><h1>К СОЖАЛЕНИЮ, В <span style="color:#CBA782" > 9 ИЗ 10 </span> СЛУЧАЕВ ЗАКАЗЧИКИ СТАЛКИВАЮТСЯ СО СЛЕДУЮЩИМИ ПРОБЛЕМАМИ</h1></a>
+    {% for q in page2 %}
+        <ul>
+            <li>{{ q.problems|linebreaksbr}}</li>
+        </ul>
+    {% endfor %}
+</div>
+</body>
+</html>

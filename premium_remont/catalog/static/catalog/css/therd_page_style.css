@@ -1,0 +1,43 @@
+.part3 {
+    height: auto;
+    display: flex;
+    background-color:#21201E;
+}
+
+.part3 img {
+    width:50%;
+    float:left;
+}
+
+.part3_1 {
+    color:white;
+    padding:0px;
+    display:inline-block;
+    position: relative;
+    z-index:0;
+}
+
+.part3_1 h1 {
+    padding:40px 40px 0px 80px;
+}
+
+.part3_1 ul{
+    padding:20px 100px;
+}
+.part3_1 li{
+    padding:10px;
+    font-size:20px;
+}
+
+.part3_2 {
+    background-color:white;
+    color:black;
+    padding:80px 80px 50px 80px;
+    position: absolute;
+    bottom: 0px;
+    font-size:16px;
+    font-weight:lighter;
+    margin-top:20px;
+    z-index:0;
+}
+

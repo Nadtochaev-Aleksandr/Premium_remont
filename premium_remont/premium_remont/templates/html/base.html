@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Ремонт, строительство, дизайт, ремонт квартир, Премиальный ремонт Минск">
+    <meta name="description" content="Это сайт организации 'Премиальный ремонт' ">
+    <title>{% block title %} Premium remont {% endblock title %}</title>
+    <link href="{% static 'css/base_style.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo.png' %}">
+</head>
+<body>
+    <nav>
+        <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo">
+        <div class="Navigatpanel">
+            <a href="#Проблемы">Проблемы</a>
+            <a href="#Этапы ремонта">Этапы ремонта</a>
+            <a href="#">Процесс</a>
+            <a href="#">Гарантии</a>
+            <a href="#Контакты">Контакты</a>
+        </div>
+
+    </nav>
+    <div class="afternav">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <a name="Контакты">Контакты</a>
+        <h3>Телефон: +375 44 579 95 99</h3>
+        <h3>Telegram: <a href="@super_whale" target="_blank">@super_whale</a></h3>
+        <h3>Instagram: <a href="https://www.instagram.com/masterskaya_vashego_remonta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">masterskaya_vashego_remonta</a></h3>
+        <h3>УНП: ####### </h3>
+    </footer>
+</body>
+</html>
