@@ -1,0 +1,55 @@
+{% extends "html/base.html" %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>форма заявки</title>
+    <link href="{% static 'catalog/css/form_style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="forma">
+    <div class="forma1">
+        <h1>Добро пожаловать на форму для завяки на экскурсию!</h1>
+        <h2>Пожалуйста заполните форму, указав удобный для Вас способ связи и с Вами свяжуться наши специалисты в кратчайшие сроки в рабочее время (с 9:00 до 21:00 понедельник-суббота)</h2>
+        <div class="input_obviosly">
+            <label for="Name">Ваше имя</label>
+            <input type="text" id="Name" required placeholder="Введите Ваше имя">
+        </div>
+        <div class="input">
+            <label for="Отчество">Ваше отчетсво (при необходимости)</label>
+            <input type="text" id="Отчество"  placeholder="Введите Ваше отчество">
+        </div>
+        <div class="input">
+            <label for="Телефон">Ваше номер телефона</label>
+            <input type="number" id="Телефон" placeholder="Введите номер Вашего мобильного телефона с кодом оператора">
+        </div>
+        <div class="input">
+            <label for="E-mail">Ваша электронная почта</label>
+            <input type="email" id="E-mail" placeholder="Введите Ваш e-mail">
+        </div>
+        <div class="input">
+            <label for="messendger">Удобный Вам мессенджер или социальная сеть</label>
+            <input type="text" id="messendger" placeholder="Наименование мессенджера или соц. сети">
+            <input type="text" placeholder="Никнейм или номер телефона">
+        </div>
+        <div  class="input_obviosly">
+            <p>Для дальнейшей работы нам необходимо Ваше согласие на обработку Ваших персональных данных, введенных выше в данной форме.
+            Поставив галочку в окошке ниже Вы даёте согласие на обработку персональных данных.</p>
+            <label for="Согласие">Я даю согласие на обработку персональных данных</label>
+            <input type="checkbox" id="Согласие" required>
+        </div>
+        <p>Поля помеченные символом "<span style="color:red">*</span>" являются обязательными для заполнения.
+            Кроме того должна быть заполена хотя бы одно поле из полей с контактными данными (номером
+            телефона, электронной почтой, данные мессенджера или социальной сети).</p>
+
+        <div class="form_button">
+            <input type="submit" value="Отправить данные">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock content %}

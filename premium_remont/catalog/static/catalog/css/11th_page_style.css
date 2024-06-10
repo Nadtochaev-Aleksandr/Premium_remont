@@ -1,0 +1,102 @@
+.p11 {
+    display:flex;
+    height:auto;
+    padding:0px;
+    margin:0px;
+}
+
+.p11_left {
+    display:inline-block;
+    width:50%;
+    height:100%;
+    box-sizing:border-box;
+    margin:0px;
+}
+
+.p11_right {
+    display:inline-block;
+    width:50%;
+    height:100%;
+    box-sizing:border-box;
+    background-color:#CBA782;
+    color:white;
+    margin:0px;
+    padding: 3% 0px;
+    position:relative;
+    z-index: 1;
+}
+
+.p11_left h2 {
+    padding:10% 10% 10% 10%;
+}
+
+.p11_left h1 {
+    padding:0% 10% 4% 10%;
+    color:#CBA782;
+    font-size:60px;
+}
+
+.p11_right ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+
+.p11_right li {
+    font-size:25px;
+    padding:20px 55px;
+    position:relative;
+    z-index:1;
+}
+
+.p11_right li::before {
+    content:url('../img/List_white_2.png');
+    position:absolute;
+    transform: scaleX(0.5) scaleY(0.5);
+    top: 0px;
+    left: 0px;
+}
+
+.p11_right img {
+    position:absolute;
+    width:20%;
+    height:35%;
+    top:20px;
+    right:0px;
+    z-index: 0;
+}
+
+/*.p11_right li::marker {
+    content:url('../img/List_white_2.png');
+    content-size:10%;
+    width:5px;
+    height:5px;
+}*/
+
+.p11_right p {
+    width:40%;
+    font-size:20px;
+    padding:10px 0px 20px 60px;
+    margin:0px;
+}
+
+.button4 {
+    position:absolute;
+    background-color:#CBA782;
+    right:20%;
+    bottom:5%;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    z-index:8;
+    border:3px solid white;
+    text-align: center;
+}
+
+.button4 a {
+    display:block;
+    padding-top:35%;
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+}

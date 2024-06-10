@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="p1">
-    <img src="{% static 'catalog/img/sovremennyj-interier.jpg' %}" alt="Тут должна быть фотка ремонта" >
+    <img src="{% static 'catalog/img/p1_img.jpg' %}" alt="Тут должна быть фотка ремонта" >
     <div class="p1_text">
         {% for i in page1 %}
             <p class="title"> {{i.title|upper}} </p>
@@ -20,7 +20,12 @@
             </ul>
         {% endfor %}
     </div>
-
+    <div class="button1">
+        <a  href="form/">
+        Записаться на экскурсию
+        </a>
+    </div>
+    <a name="Проблемы"></a>
 </div>
 
 </body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'catalog/css/8th_page_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="p8">
+    <h1>Немного о нас</h1>
+    <div class="p8_content">
+        <div class="p8_content_text">
+            <h2>{{title}}</h2>
+            <p>{{ content|linebreaksbr}}</p>
+            <p id="p8_footer">{{ footer}}</p>
+        </div>
+        <div class="p8_content_img">
+            <img src="{% static 'catalog/img/Yura.JPG' %}">
+        </div>
+    </div>
+    <div class="button3">
+        <a  href="form/">
+        Записаться на экскурсию
+        </a>
+    </div>
+</div>
+
+<!--<img src="{% static img %}">-->
+
+<!--{% for i in page8 %}-->
+<!--    <h2>{{i.p8title}}</h2>-->
+<!--    <p>{{ i.p8content}}</p>-->
+<!--    <p>{{ i.p8footer}}</p>-->
+<!--    <img src="{% static i.p8image %}">-->
+<!--{% endfor %}-->
+</body>
+</html>

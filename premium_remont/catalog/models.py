@@ -15,3 +15,9 @@ class Fourth_page(models.Model):
     title=models.CharField(max_length=250)
     list_title=models.CharField(max_length=250)
     list_text=models.TextField()
+
+class Eighth_page(models.Model):
+    p8title=models.CharField(max_length=250)
+    p8image=models.FileField()
+    p8content=models.TextField()
+    p8footer=models.TextField()

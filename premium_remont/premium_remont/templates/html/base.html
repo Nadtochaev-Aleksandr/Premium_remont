@@ -11,15 +11,15 @@
 </head>
 <body>
     <nav>
-        <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo">
+        <a href="/"><img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo"></a>
         <div class="Navigatpanel">
             <a href="#Проблемы">Проблемы</a>
             <a href="#Этапы ремонта">Этапы ремонта</a>
-            <a href="#">Процесс</a>
-            <a href="#">Гарантии</a>
+            <a href="#Процесс">Процесс</a>
+            <a href="#Гарантии">Гарантии</a>
             <a href="#Контакты">Контакты</a>
         </div>
-
+        <a name="Начало"></a>
     </nav>
     <div class="afternav">
         {% block content %}
@@ -27,11 +27,15 @@
     </div>
 
     <footer>
-        <a name="Контакты">Контакты</a>
-        <h3>Телефон: +375 44 579 95 99</h3>
-        <h3>Telegram: <a href="@super_whale" target="_blank">@super_whale</a></h3>
-        <h3>Instagram: <a href="https://www.instagram.com/masterskaya_vashego_remonta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">masterskaya_vashego_remonta</a></h3>
-        <h3>УНП: ####### </h3>
+        <div class="footer_left">
+            <a name="Контакты"></a>
+            <h2>Наши контакты:</h2>
+            <h3>Телефон: +375 44 579 95 99</h3>
+            <h3>Telegram: <a href="@super_whale" target="_blank">@super_whale</a></h3>
+            <h3>Instagram: <a href="https://www.instagram.com/masterskaya_vashego_remonta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">masterskaya_vashego_remonta</a></h3>
+            <h3>УНП: ####### </h3>
+            <p>Ⓒ2024 Все права защищены </p>
+        </div>
     </footer>
 </body>
 </html>

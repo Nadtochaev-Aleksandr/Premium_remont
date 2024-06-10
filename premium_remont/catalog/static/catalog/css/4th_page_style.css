@@ -4,14 +4,13 @@
     background-color:#21201E;
     color: white;
     height: auto;
-    padding:40px;
+    padding:100px 40px 50px 40px;
 }
 
 /* стили для нумерованного списка */
 .p4 ol {
     padding-left:45px;
     counter-reset: cont1;
-    counter-increment: cont1;
 }
 /* стили для элементов списка */
 .p4 li {
@@ -19,12 +18,17 @@
     font-size:15px;
     border-bottom: 1px solid #CECECE;
     position:relative;
-    /*list-style: none; /* Убираем исходные маркеры */
+    list-style: none; /* Убираем исходные маркеры */
 }
-.p4 li:before {
+.p4 li::before {
     content: counter(cont1);
+    counter-increment: cont1;
     font-size: 50px;
     color: #CBA782;
+    position:absolute;
+    top:10;
+    left:0;
+    transform: translateX(-50px);
 }
 /* стили для маркеров списка */
 .p4 li::marker{

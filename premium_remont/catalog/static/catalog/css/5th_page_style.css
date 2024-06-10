@@ -1,10 +1,11 @@
 .p5 {
+    position:relative;
     height:1000px;
     width:100%;
     color: white;
     /*background-image:url('https://toremont.ru/bundles/app/images/A9G.jpg');- ссыдлка на изображение по внешнему url адресу из интернет сети*/
     /*background-image:url('page5.jpg');ссыдлка на изображение по пути внутри папки css (папки в которой находится файл 5th_page_style.css*/
-    background-image:url('../img/page5.jpg'); /*ссыдлка на изображение по пути static/img/page5.jpg - ".." означают выход из папки css в которой находится файл 5th_page_style.css, попадаем в папку static. Далее прописываем путь к файлу - папка img/ файл 5page.jpg*/
+    background-image:url('../img/p5_img.jpg'); /*ссыдлка на изображение по пути static/img/page5.jpg - ".." означают выход из папки css в которой находится файл 5th_page_style.css, попадаем в папку static. Далее прописываем путь к файлу - папка img/ файл 5page.jpg*/
     opacity: 0,5;
     background-repeat: no-repeat;
     background-size: 100% 1000px;
@@ -14,4 +15,26 @@
 .p5 h1 {
     font-size: 40px;
     padding:250px;
+}
+
+.button2 {
+    position:absolute;
+    background-color:#CBA782;
+    left:calc(45%);
+    bottom:30%;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    z-index:8;
+    border:5px solid #696969;
+    text-align: center;
+    font-weight:bold;
+}
+
+.button2 a {
+    display:block;
+    padding-top:35%;
+    text-decoration: none;
+    color:white;
+    font-size:18px;
 }

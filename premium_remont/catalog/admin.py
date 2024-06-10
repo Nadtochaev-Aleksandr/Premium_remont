@@ -5,3 +5,4 @@ from . import models
 admin.site.register(models.First_page)
 admin.site.register(models.Second_page)
 admin.site.register(models.Fourth_page)
+admin.site.register(models.Eighth_page)

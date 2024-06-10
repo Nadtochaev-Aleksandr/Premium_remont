@@ -1,0 +1,52 @@
+.forma {
+    background-image:url('../img/form_back.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    padding:5% 0px;
+
+}
+
+.forma1 {
+    background-color:#21201E;
+    color: white;
+    width:70%;
+    heigth:auto;
+    margin:auto;
+    opacity:0.6;
+    border: 3px solid white;
+    box-shadow:12px 12px 2px 1px rgba(10, 10, 10, .7);
+
+}
+
+.forma1 h1 {
+    text-align: center;
+    padding:50px;
+    text-shadow:10px 10px 1px rgba(0, 0, 0, .9), 10px 10px 1px white;
+}
+
+.forma1 h2 {
+    text-align: center;
+    padding:10px 50px;
+    text-shadow:10px 10px 1px rgba(0, 0, 0, .9), 10px 10px 1px white;
+}
+
+.input, .input_obviosly {
+    padding:5px 10px 5px 50px;
+}
+
+.input_obviosly label::after {
+    content:" * ";
+    color:red;
+}
+
+.forma1 p {
+    text-align: center;
+    padding:10px 50px;
+    text-shadow:10px 10px 1px rgba(0, 0, 0, .9), 10px 10px 1px white;
+}
+
+.form_button {
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:50px;
+}

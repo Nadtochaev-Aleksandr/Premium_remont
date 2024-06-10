@@ -1,0 +1,44 @@
+.p10 {
+    background-color:#21201E;
+    height:auto;
+    color:white;
+}
+
+.p10 h1 {
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+    text-transform:uppercase;
+}
+
+.p10_blocks{
+    display:flex;
+    padding:0px 10% 50px 10%;
+    height:auto;
+    position:relative;
+}
+
+.p10_block {
+    display:inline-block;
+    width:25%;
+    aspect-ratio: 1 / 1;
+    background-color:#CBA782;
+    margin:10px;
+}
+
+.p10_block img{
+    display:block;
+    width:20%;
+    aspect-ratio: 1 / 1;
+    margin:10% auto;
+}
+
+.p10_block h3 {
+    text-align: center;
+    padding:10px 10%;
+}
+
+.p10_block p {
+    text-align: center;
+    padding:0px 5%;
+}

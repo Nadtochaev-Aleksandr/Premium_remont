@@ -33,4 +33,18 @@ nav img {
     right: 0;
 }
 
-.Navigatpanel a {color:#CECECE;}
+.Navigatpanel a {color:silver;}
+
+footer {
+    background: #21201E;
+    color: white;
+    padding:40px;
+}
+
+footer h2, h3 {
+    padding: 10px 0px;
+}
+
+footer p {
+    text-align: right;
+}
