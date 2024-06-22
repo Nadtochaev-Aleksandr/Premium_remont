@@ -1,0 +1,98 @@
+{% extends "html/base.html" %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{object.p9_title}}</title>
+    <link href="{% static 'catalog/css/portfolio_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="portfolio">
+    <h3>{{object.p9_title}}</h3>
+    <img src="{% static object.p9_1 %}">
+    <img src="{% static object.p9_2 %}">
+    <img src="{% static object.p9_3 %}">
+
+    <img src="{% static object.p9_4 %}">
+    <img src="{% static object.p9_5 %}">
+    <img src="{% static object.p9_6 %}">
+    <img src="{% static object.p9_7 %}">
+    <img src="{% static object.p9_8 %}">
+    <img src="{% static object.p9_9 %}">
+    <img src="{% static object.p9_10 %}">
+    <img src="{% static object.p9_11 %}">
+    <img src="{% static object.p9_12 %}">
+    <img src="{% static object.p9_13 %}">
+    <img src="{% static object.p9_14 %}">
+    <img src="{% static object.p9_15 %}">
+
+<p>{{ object.p9_1}}</p>
+
+
+
+
+<!--    {% if object.p9_4 %}-->
+<!--        <img src="{% static object.p9_4 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 4</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_5.exists %}-->
+<!--        <img src="{% static object.p9_5 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 5</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_6.exists %}-->
+<!--        <img src="{% static object.p9_6 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 6</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_7.exists %}-->
+<!--        <img src="{% static object.p9_7 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 7</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_8.exists %}-->
+<!--        <img src="{% static object.p9_8 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 8</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_9.exists %}-->
+<!--        <img src="{% static object.p9_9 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 9</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_10.exists %}-->
+<!--        <img src="{% static object.p9_10 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 10</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_11.exists %}-->
+<!--        <img src="{% static object.p9_11 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 11</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_12.exists %}-->
+<!--        <img src="{% static object.p9_12 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 12</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_13.exists %}-->
+<!--        <img src="{% static object.p9_13 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 13</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_14.exists %}-->
+<!--        <img src="{% static object.p9_14 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 14</p>-->
+<!--    {% endif %}-->
+<!--    {% if object.p9_15.exists %}-->
+<!--        <img src="{% static object.p9_15 %}">-->
+<!--    {% else %}-->
+<!--        <p>photo 15</p>-->
+<!--    {% endif %}-->
+</div>
+</body>
+</html>
+{% endblock content %}

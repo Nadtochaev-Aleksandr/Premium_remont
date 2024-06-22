@@ -8,7 +8,16 @@
 </head>
 <body>
 <div class="p1">
-    <img src="{% static 'catalog/img/p1_img.jpg' %}" alt="Тут должна быть фотка ремонта" >
+<!--    Вариант вывода 1 - из базы данных через цикл перебора объектов базы данных-->
+<!--    {% for i in page1 %}-->
+<!--        <img src="{% static i.img %}">-->
+<!--    {% endfor %}-->
+
+{#<!--    Вариант вывода не обращаясь к модели а напрямую вставляя картинку через тег html -->#}
+<!--    <img src="{% static 'catalog/img/p1_img.jpg' %}" alt="Тут должна быть фотка ремонта" >-->
+
+<!--    Вариант вывода изображения из базы данных-->
+    <img src="{% static p1_img %}">
     <div class="p1_text">
         {% for i in page1 %}
             <p class="title"> {{i.title|upper}} </p>

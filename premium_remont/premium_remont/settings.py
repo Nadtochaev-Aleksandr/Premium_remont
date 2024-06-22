@@ -13,24 +13,24 @@ import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # Путь, указывающий расположение папки проекта
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tyhu1c7vd3ax-(c&(r@s4kp(kpmfz8q9z8sg0-=f!morb6lqg-'
+SECRET_KEY = 'django-insecure-tyhu1c7vd3ax-(c&(r@s4kp(kpmfz8q9z8sg0-=f!morb6lqg-' #Секретный ключ
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #Переменная, определяющая в каком состоянии находится проект готовом или еще тестирования
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] #Допустимые хосты
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ # список установленных прилажений в проекте
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,11 +52,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'premium_remont.urls'
 
-TEMPLATES = [
+TEMPLATES = [ #Шаблонизатор django
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['premium_remont/templates'],
-        'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates', # Движок шаблонизатора
+        'DIRS': ['premium_remont/templates'], # Папка в которой шаблонизатор будет искать файлы шаблонов кроме стандартных путей (папок templates в прилажениях проекта)
+        'APP_DIRS': True,  # Переменная, отвечающая за то будет ли шаблонизатор искать файлы шаблонов в папках templates в прилажениях проекта
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'premium_remont.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+DATABASES = { #Настройски баз данных
+    'default': { # Содержит словарь с конфигурациями баз данных
+        'ENGINE': 'django.db.backends.sqlite3', # по умолчанию используется база данных с движком на базе sqlite3
+        'NAME': BASE_DIR / 'db.sqlite3', # имеет имя db.sqlite3 и расположена в основной папке проекта
     }
 }
 
@@ -85,7 +85,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
+AUTH_PASSWORD_VALIDATORS = [ # Валидаторы авторизации
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
@@ -104,19 +104,19 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ru' # Переменная, определяющая язык проекта
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC' # Переменная, определяющая временную зону проекта (часовой пояс)
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = True # Переменная отвечающая за то принимать ли во внимание значение в переменной TIME_ZONE или нет
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' # Настройки статических файлов
 STATICFILES_DIRS = ['premium_remont/static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -125,5 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Настройки медиафайлов
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

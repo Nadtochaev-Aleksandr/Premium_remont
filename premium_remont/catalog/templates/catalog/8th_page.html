@@ -16,7 +16,11 @@
             <p id="p8_footer">{{ footer}}</p>
         </div>
         <div class="p8_content_img">
-            <img src="{% static 'catalog/img/Yura.JPG' %}">
+<!--            <img src="{% static 'catalog/img/Yura.JPG' %}"> &lt;!&ndash; вариант вывода изображения без обращения к базе данных, напрямую через html &ndash;&gt;-->
+<!--            <img src="{% static img %}"> &lt;!&ndash; вывод изображения из базы данных&ndash;&gt;-->
+            {% for i in page8 %} <!--вывод изображения из базы данных№2-->
+                    <img src="{% static i.p8image %}">
+            {% endfor %}
         </div>
     </div>
     <div class="button3">

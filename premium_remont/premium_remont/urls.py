@@ -19,10 +19,11 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from premium_remont import settings
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('catalog.urls'), name='catalog'),
+urlpatterns = [ #Список путей используемых в проекте
+    path('admin/', admin.site.urls), # путь к админпанели
+    path('', include('catalog.urls'), name='catalog'), #Путь к прилажению catalog
 ]
 
+# проверка находится ли сайт в режиме тестирования и добавление необходимых путей для медиафайлов в режиме тестирования
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

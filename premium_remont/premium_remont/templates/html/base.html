@@ -1,40 +1,42 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Ремонт, строительство, дизайт, ремонт квартир, Премиальный ремонт Минск">
-    <meta name="description" content="Это сайт организации 'Премиальный ремонт' ">
-    <title>{% block title %} Premium remont {% endblock title %}</title>
-    <link href="{% static 'css/base_style.css' %}" rel="stylesheet">
-    <link rel="icon" href="{% static 'img/logo.png' %}">
-</head>
-<body>
-    <nav>
-        <a href="/"><img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo"></a>
-        <div class="Navigatpanel">
-            <a href="#Проблемы">Проблемы</a>
+<!DOCTYPE html> <!-- базовый шаблон, задающий основу для всего остального сайта -->
+{% load static %} <!-- тег указывающий что в данном шаблоне может быть использован  -->
+<!-- -->
+<html lang="en"> <!-- тег, определяющий язык, используемый на сайте -->
+<head> <!-- тег head определяет основные настройки страницы -->
+    <meta charset="UTF-8"> <!-- в данной строке определена кодировка, используемая на странице -->
+    <meta name="keywords" content="Ремонт, строительство, дизайт, ремонт квартир, Премиальный ремонт Минск"> <!-- в данной строке заданы ключевые слова и фразы, по которым поисковые системы будут искать сайт -->
+    <meta name="description" content="Это сайт организации 'Премиальный ремонт' "> <!-- в данной строке указано краткое описание, которое былет отображено под именем сайта, когда поисковые системы найдут сайт, но пользователь ещё его не откроет -->
+    <title>{% block title %} Premium remont {% endblock title %}</title> <!-- в данной строке указано наименование страницы. Оно задано как блок title, чтобы его можно было переопределять на каждой самостоятельной странице, но по умолчанию задано значение Premium remont site -->
+    <link href="{% static 'css/base_style.css' %}" rel="stylesheet"> <!-- Задана ссылка на файл с таблицами стилей css. Следовательно стили для данной странице будут браться из фала указанного в атрибуте href в данной строке -->
+    <link rel="icon" href="{% static 'img/logo.png' %}"> <!-- В данной строке задана иконка для странички -->
+</head> <!-- Окончание блока head -->
+<body> <!-- Блок body содержит код, отображаемый на странице (видимая часть кода) -->
+<a name="верх"></a>
+    <nav> <!-- блок с навигационной панелью -->
+        <a href="/"><img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo"></a> <!-- Отображение логотипа, обернутое в тег ссылки для перехода на главную страницу при нажатии на логотип -->
+        <div class="Navigatpanel"> <!-- блок, выделяющий список в навигационной панели -->
+            <a href="#Проблемы">Проблемы</a> <!-- список навигационной палели, обернутый в ссылки-якоря, ссылающиеся на определенные места на странице -->
             <a href="#Этапы ремонта">Этапы ремонта</a>
             <a href="#Процесс">Процесс</a>
             <a href="#Гарантии">Гарантии</a>
             <a href="#Контакты">Контакты</a>
         </div>
-        <a name="Начало"></a>
     </nav>
-    <div class="afternav">
+    <div class="afternav"> <!-- Блок с основным телом боди, здесь задан тегом block content для того чтобы его возможно было задавать на каждой отдельной странице -->
         {% block content %}
         {% endblock content %}
     </div>
 
-    <footer>
-        <div class="footer_left">
-            <a name="Контакты"></a>
+    <footer> <!-- блок footer - нижняя часть страницы, одинаковая для всех страниц -->
+        <div class="footer_left"> <!-- --><!-- --><!-- -->
+            <a name="Контакты"></a> <!-- якорь для кнопки "Контакты" -->
             <h2>Наши контакты:</h2>
             <h3>Телефон: +375 44 579 95 99</h3>
             <h3>Telegram: <a href="@super_whale" target="_blank">@super_whale</a></h3>
             <h3>Instagram: <a href="https://www.instagram.com/masterskaya_vashego_remonta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">masterskaya_vashego_remonta</a></h3>
             <h3>УНП: ####### </h3>
             <p>Ⓒ2024 Все права защищены </p>
+            <a class="last_button" href="#верх">↑ Наверх ↑</a>
         </div>
     </footer>
 </body>

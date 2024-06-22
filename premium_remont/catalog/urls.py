@@ -12,6 +12,8 @@ urlpatterns = [
     path('7th/', seventh_page),
     path('8th/', eighth_page),
     path('9th/', ninth_page),
+    path("9th/<str:object>/", object_page, name='object'),
+    path("9th/<str:object>/<str:photo>", object_photo_page, name='object_photo'),
     path('10th/', tenth_page),
     path('11th/', eleventh_page),
     path('form/', form),
