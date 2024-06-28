@@ -25,9 +25,9 @@ class Eighth_page(models.Model):
 
 class Nine_page(models.Model): #Объекты
     p9_title=models.CharField(max_length=250)
-    p9_1=models.ImageField(upload_to="catalog/img/", default='img')
-    p9_2=models.ImageField(upload_to="catalog/img/", default='img')
-    p9_3 = models.ImageField(upload_to="catalog/img/", default='img')
+    p9_1=models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
+    p9_2=models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
+    p9_3 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
     p9_4 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
     p9_5 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
     p9_6 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
@@ -41,6 +41,15 @@ class Nine_page(models.Model): #Объекты
     p9_14 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
     p9_15 = models.ImageField(upload_to="catalog/img/", default='img', blank=True, null=True)
 
+    def __str__(self): # метод, который вместо id будет отображать поле p9_title, как более понятную и приёмлемую информацию
+        return self.p9_title # тут в return и указывается какое поле необходимо возвращать вместо id
+
+class Photo(models.Model):
+    obect=models.ForeignKey(Nine_page, on_delete=models.PROTECT)
+    photo=models.ImageField(upload_to="catalog/img/", default='img')
+
+    def __str__(self): # метод, который вместо id будет отображать поле obect, как более понятную и приёмлемую информацию
+        return str(self.obect)+' '+str(self.pk) # тут в return и указывается какое поле необходимо возвращать вместо id
 
 class Ten_page(models.Model):
     p10_img=models.ImageField(upload_to="catalog/img/", default='img')

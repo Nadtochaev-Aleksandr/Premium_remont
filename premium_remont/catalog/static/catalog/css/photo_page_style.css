@@ -1,0 +1,43 @@
+.photo_page {
+    color:white;
+    background-color:#21201E;
+    padding:20px;
+    position:relative
+}
+
+.photo_page h3 {
+    font-size:50px;
+    text-align: center;
+}
+
+.photo_page img {
+    display:block;
+    width:70%;
+    /*height:80%;*/
+    margin:50px auto;
+}
+
+.photo_page a {
+    color:white;
+    text-decoration: none;
+    font-size:50px;
+}
+
+.photo_page a {
+    color:white;
+    text-decoration: none;
+    font-size:50px;
+}
+
+.photo_page_a_left {
+    display:block;
+    position:absolute;
+    top:50%;
+}
+
+.photo_page_a_right {
+    display:block;
+    position:absolute;
+    top:50%;
+    right:2%;
+}

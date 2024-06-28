@@ -18,15 +18,20 @@
             <a href="{% url 'object' i.p9_title %}"><h3>{{i.p9_title}}</h3></a>
             <a href="{% url 'object' i.p9_title %} "><img src="{% static i.p9_1 %}"></a>
             <a href="{% url 'object' i.p9_title %}"><img src="{% static i.p9_2 %}"></a>
-            <img src="{% static i.p9_3 %}">
-            <img src="{% static i.p9_4 %}">
+            <a href="{% url 'object' i.p9_title %}"><img src="{% static i.p9_3 %}"></a>
+            <a href="{% url 'object' i.p9_title %}"><img src="{% static i.p9_4 %}"></a>
             <a href="{% url 'object' i.p9_title %}"><p>еще...</p></a>
-
-    {#<!--            {% for n in len(i)-1 %}-->#}
- {#<!--                <img src="{% static i.p9_n %}">-->#}
- {#<!--            {% endfor %}-->#}
         </div>
     {% endfor %}
+    <br>
+
+    {% comment %}
+<!--    {% for n in range(1:5) %}-->
+<!--        <img src="{% static i.p9_3 %}">-->
+<!--        <img src="{% static i.p9_4 %}">-->
+<!--    {%  endfor %}-->
+{% endcomment %}
+
 
 </div>
 </body>

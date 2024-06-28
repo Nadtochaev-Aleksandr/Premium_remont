@@ -9,29 +9,49 @@
 </head>
 <body>
 <div class="portfolio">
-    <h3>{{object.p9_title}}</h3>
-    <img src="{% static object.p9_1 %}">
-    <img src="{% static object.p9_2 %}">
-    <img src="{% static object.p9_3 %}">
-
-    <img src="{% static object.p9_4 %}">
-    <img src="{% static object.p9_5 %}">
-    <img src="{% static object.p9_6 %}">
-    <img src="{% static object.p9_7 %}">
-    <img src="{% static object.p9_8 %}">
-    <img src="{% static object.p9_9 %}">
-    <img src="{% static object.p9_10 %}">
-    <img src="{% static object.p9_11 %}">
-    <img src="{% static object.p9_12 %}">
-    <img src="{% static object.p9_13 %}">
-    <img src="{% static object.p9_14 %}">
-    <img src="{% static object.p9_15 %}">
-
-<p>{{ object.p9_1}}</p>
+<!--    Выводим фотографии полученные из коллекции photos - полученной через выборку всех объектов модели Photo в которой obect равняется полю p9_title <br>-->
+    <h3>{{object}}</h3>
+    {% for i in photos %}
+        <a href="{%url 'photos' i.obect i.pk%}"><img src="{% static i.photo %}"></a>
+    {% endfor %}
 
 
+<!-- старый вариант исполнения кода, при котором фото выводятся из модели Nine_page, а не из модели Photo -->
+<!--    <h3>{{object.p9_title}}</h3>-->
+<!--    <img src="{% static object.p9_1 %}">-->
+<!--    <img src="{% static object.p9_2 %}">-->
+<!--    <img src="{% static object.p9_3 %}">-->
+<!--    <img src="{% static object.p9_4 %}">-->
+<!--    <img src="{% static object.p9_5 %}">-->
+<!--    <img src="{% static object.p9_6 %}">-->
+<!--    <img src="{% static object.p9_7 %}">-->
+<!--    <img src="{% static object.p9_8 %}">-->
+<!--    <img src="{% static object.p9_9 %}">-->
+<!--    <img src="{% static object.p9_10 %}">-->
+<!--    <img src="{% static object.p9_11 %}">-->
+<!--    <img src="{% static object.p9_12 %}">-->
+<!--    <img src="{% static object.p9_13 %}">-->
+<!--    <img src="{% static object.p9_14 %}">-->
+<!--    <img src="{% static object.p9_15 %}">-->
 
 
+<!--<p>{{ object.p9_1}}</p> <br>-->
+
+<!--    Отображаем что из себя предлставляет коллекция photos - полученная через выборку всех объектов модели Photo в которой obect равняется полю p9_title {{ photos }} <br>-->
+<!--    Отображаем что из себя предлставляет коллекция imgs - полученная через выборку всех объектов модели Nine_page через связанную таблицу Photo при помощи функции _set {{ imgs }} <br>-->
+<!--    отображаем поле {{ imgs.photo }} <br>-->
+<!--    <img src="{% static object.p9_1 %}">-->
+
+
+
+<!--    <br> <br> <br>-->
+<!--    второй вариант вывода изображений, из более сложным способом добытой переменноц imgs-->
+<!--    Выводим фотографии полученные из коллекции imgs - полученной через выборку всех объектов модели Nine_page через связанную таблицу Photo при помощи функции _set <br>-->
+<!--    {% for k in imgs %}-->
+<!--        <img src="{% static k.photo %}">-->
+<!--    {% endfor %}-->
+
+<!--Неудачные эксперименты-->
 <!--    {% if object.p9_4 %}-->
 <!--        <img src="{% static object.p9_4 %}">-->
 <!--    {% else %}-->
