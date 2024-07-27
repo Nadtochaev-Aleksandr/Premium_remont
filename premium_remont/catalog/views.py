@@ -1,8 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import *
 # Create your views here.
-def main_page(request):
-    p1 = First_page.objects.all()
+def main_page(request): # функция представления главной страницы сайта, в ней собраны все элементы
+    p1 = First_page.objects.all() # вызоб объектов из всех моделей, задействованных на странице
     p1_img=p1[0].img
     p2 = Second_page.objects.all()
     p4=Fourth_page.objects.all()
@@ -125,5 +126,20 @@ def tenth_page(request):
 def eleventh_page(request):
     return render(request, 'catalog/11th_page.html')
 
-def form(request):
-    return render(request, 'catalog/form.html')
+def form(request): #Функция представления отображающая страницу формы
+    if request.method=='POST': # Проверка является ли метод запроса - методом POST
+        application=Form( # Если да - то создается объект класса Form (модели Form), элементы которого
+            # заполняются атрибутами объекта
+            name=request.POST.get('name'), #Атрибут name (соответсвует наименованию поля модели Form)
+            # заполняется данными полученными из формы при помощи метода request.POST.get (имя полчаемого объекта)
+            # в данном случае имя - name - получено из данных, находившихся в поле с именем name.
+            otchestvo=request.POST.get('otchestvo'), #Аналогичным образом получаются остальные поля
+            phonenumber=request.POST.get('phonenumber'),
+            email=request.POST.get('email'),
+            messendger=request.POST.get('messendger'),
+            nickname=request.POST.get('nickname'),
+        )
+        application.save() # метод сохраняющий изменения в объекте application - записывает изменения в базу данных
+        return render(request, 'catalog/form.html') # вывод страницы catalog/form.html
+    else:
+        return render(request, 'catalog/form.html') # если запрос не POST - то тоже выводим страницы catalog/form.html

@@ -16,7 +16,7 @@ urlpatterns = [
     path('9th/<str:object>/<int:pk>', photo, name='photos'),
     path('10th/', tenth_page),
     path('11th/', eleventh_page),
-    path('form/', form),
+    path('form/', form, name='form'),
 ]
 
 
